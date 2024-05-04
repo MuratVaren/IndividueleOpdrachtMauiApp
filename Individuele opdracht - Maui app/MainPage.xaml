@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Individuele_opdracht___Maui_app.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Barnevelder_Cock.png/266px-Barnevelder_Cock.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Murat, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Welcome to my amazing app, if I was a teacher I would give this a 100/100!"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="LoadAuthorsBtn"
+                Text="Load authors!" 
+                Clicked="LoadAuthorsBtn_Clicked"
+                HorizontalOptions="Fill" />
+            <ListView x:Name="ListViewAuthors" HasUnevenRows="True" ItemTapped="ListViewAuthors_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Image Source="{Binding ImageAuthor}" HorizontalOptions="Center"  MaximumHeightRequest="500" MinimumWidthRequest="500"/>
+                                <Label Text="{Binding Name, StringFormat='Name: {0}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding Country, StringFormat='Country: {0}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding Birthdate, StringFormat='Birthdate: {0:dd/MM/yyyy}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding MostPopularWork, StringFormat='Most popular work: {0}'}" HorizontalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -18,11 +18,11 @@ namespace MauiAppAuthor
         public void FillListAvailableImages()
         {
             listAvailableImages.Clear();
-            listAvailableImages.Add("Images/King.jpg");
-            listAvailableImages.Add("Images/Martin.jpg");
-            listAvailableImages.Add("Images/Remi.jpg");
-            listAvailableImages.Add("Images/Rowling.jpg");
-            listAvailableImages.Add("Images/Tolkien.jpg");
+            listAvailableImages.Add("king.jpg");
+            listAvailableImages.Add("martin.jpg");
+            listAvailableImages.Add("remi.jpg");
+            listAvailableImages.Add("rowling.jpg");
+            listAvailableImages.Add("tolkien.jpg");
         }
         async Task FillAuthorList()
         {
@@ -49,7 +49,7 @@ namespace MauiAppAuthor
             {
                 if (!listAvailableImages.Contains(author.ImageAuthor))
                 {
-                    author.ImageAuthor = "Images/Placeholder.png";
+                    author.ImageAuthor = "placeholder.png";
                 }
             }
         }

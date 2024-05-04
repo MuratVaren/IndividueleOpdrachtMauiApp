@@ -40,6 +40,24 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\king.jpg">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\martin.jpg">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\placeholder.png">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\remi.jpg">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\rowling.jpg">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\tolkien.jpg">
+		  <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiImage>
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -50,17 +68,18 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\Author.svg" />
+	  <None Remove="Resources\Images\King.jpg" />
+	  <None Remove="Resources\Images\martin.jpg" />
+	  <None Remove="Resources\Images\placeholder.png" />
+	  <None Remove="Resources\Images\Remi.jpg" />
+	  <None Remove="Resources\Images\Rowling.jpg" />
+	  <None Remove="Resources\Images\Tolkien.jpg" />
 	  <None Remove="Resources\Raw\Audio\Boo Hoo.mp3" />
 	  <None Remove="Resources\Raw\Audio\GameOfThrones.mp3" />
 	  <None Remove="Resources\Raw\Audio\HarryPotter.mp3" />
 	  <None Remove="Resources\Raw\Audio\LordOfTheRings.mp3" />
 	  <None Remove="Resources\Raw\Audio\Shining.mp3" />
 	  <None Remove="Resources\Raw\Audio\Tintin.mp3" />
-	  <None Remove="Resources\Raw\Images\Martin.jpg" />
-	  <None Remove="Resources\Raw\Images\Placeholder.png" />
-	  <None Remove="Resources\Raw\Images\Remi.jpg" />
-	  <None Remove="Resources\Raw\Images\Rowling.jpg" />
-	  <None Remove="Resources\Raw\Images\Tolkien.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>

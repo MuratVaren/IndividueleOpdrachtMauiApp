@@ -2,38 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppAuthor.MainPage">
-
     <ScrollView>
+       
         <VerticalStackLayout
-            Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
-
+            Spacing="25">
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                Source="Author.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                Margin="10"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                Text="Murat, World!"
+                FontSize="28"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="Welcome to my amazing app, if I was a teacher I would give this a 100/100!"
+                HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                x:Name="LoadAuthorsBtn"
+                Text="Load authors!" 
+                Clicked="LoadAuthorsBtn_Clicked"
+                HorizontalOptions="Fill" />
+            <ListView x:Name="ListViewAuthors" HasUnevenRows="True" ItemTapped="ListViewAuthors_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Image Source="{Binding ImageAuthor}" HorizontalOptions="Center"  MaximumHeightRequest="500" MinimumWidthRequest="500"/>
+                                <Label Text="{Binding Name, StringFormat='Name: {0}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding Country, StringFormat='Country: {0}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding Birthdate, StringFormat='Birthdate: {0:dd/MM/yyyy}'}" HorizontalOptions="Center" />
+                                <Label Text="{Binding MostPopularWork, StringFormat='Most popular work: {0}'}" HorizontalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         </VerticalStackLayout>
     </ScrollView>

@@ -49,7 +49,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Author.svg" />
+	  <None Remove="Resources\Raw\Audio\Boo Hoo.mp3" />
+	  <None Remove="Resources\Raw\Audio\GameOfThrones.mp3" />
+	  <None Remove="Resources\Raw\Audio\HarryPotter.mp3" />
+	  <None Remove="Resources\Raw\Audio\LordOfTheRings.mp3" />
+	  <None Remove="Resources\Raw\Audio\Shining.mp3" />
+	  <None Remove="Resources\Raw\Audio\Tintin.mp3" />
+	  <None Remove="Resources\Raw\Images\Martin.jpg" />
+	  <None Remove="Resources\Raw\Images\Placeholder.png" />
+	  <None Remove="Resources\Raw\Images\Remi.jpg" />
+	  <None Remove="Resources\Raw\Images\Rowling.jpg" />
+	  <None Remove="Resources\Raw\Images\Tolkien.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ClassLibAutheur\ClassLibAuthor.csproj" />
 	</ItemGroup>
 
 </Project>

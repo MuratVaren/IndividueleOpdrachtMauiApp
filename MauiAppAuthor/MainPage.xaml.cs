@@ -83,6 +83,12 @@ namespace MauiAppAuthor
 
         }
 
+        private async void InsertPageBtn_Clicked(object sender, EventArgs e)
+        {
+            ListViewAuthors.ItemsSource = null;
+            InsertPage insertPage = new InsertPage();
+            await Shell.Current.GoToAsync("//InsertPage");
+        }
     }
 
 }

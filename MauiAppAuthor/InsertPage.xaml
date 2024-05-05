@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppAuthor.InsertPage"
+             Title="InsertPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout>
+            <Entry x:Name="NameEntry"
+               Placeholder="Enter author's name." />
+            <Entry x:Name="CountryEntry"
+               Placeholder="Enter author's country"/>
+            <Entry x:Name="PopularWorkEntry"
+                   Placeholder="Enter author's most popular work."/>
+            <DatePicker x:Name="AuthorDatePicker"/>
+        </StackLayout>
+        <Button
+                x:Name="InsertBtn"
+                Text="Register new author!" 
+                Clicked="InsertBtn_Clicked"
+                HorizontalOptions="Fill" />
+        <Button
+                x:Name="HomePageBtn"
+                Text="Open home page!" 
+                Clicked="HomePageBtn_Clicked"
+                HorizontalOptions="Fill" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -25,7 +25,11 @@
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
+            <Button
+                x:Name="InsertPageBtn"
+                Text="Open insert page!" 
+                Clicked="InsertPageBtn_Clicked"
+                HorizontalOptions="Fill" />
             <Button
                 x:Name="LoadAuthorsBtn"
                 Text="Load authors!" 

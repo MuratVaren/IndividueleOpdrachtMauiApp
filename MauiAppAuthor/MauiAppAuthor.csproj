@@ -92,4 +92,10 @@
 	  <ProjectReference Include="..\ClassLibAutheur\ClassLibAuthor.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="InsertPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

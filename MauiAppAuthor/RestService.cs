@@ -12,15 +12,14 @@ namespace MauiAppAuthor
 {
     class RestService
     {
-        private const string REST_URL = "https://5s7727dz-7205.euw.devtunnels.ms/GetAllAuthors";
+        private const string REST_URL = "https://5s7727dz-7205.euw.devtunnels.ms/";
 
         public static async Task<List<Author>> GetAll()
         {
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = REST_URL;
-
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
+                client.BaseAddress = new Uri(REST_URL);
+                HttpResponseMessage response = await client.GetAsync("GetAllAuthors");
                 if (response.IsSuccessStatusCode)
                 {
 
@@ -63,7 +62,7 @@ namespace MauiAppAuthor
         {
             using (HttpClient client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://5s7727dz-7205.euw.devtunnels.ms/");
+                client.BaseAddress = new Uri(REST_URL);
 
                 // Prepare data to be sent in the request body
                 var postData = new
